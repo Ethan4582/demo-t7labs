@@ -21,7 +21,7 @@ const TAGS = [
 export default function GalleryPage() {
    const [activeTag, setActiveTag] = useState("RECENT");
 
-   // Filtering logic: "RECENT" shows all in this demo, otherwise filter by category
+  
    const filteredComponents = activeTag === "RECENT"
       ? components
       : components.filter(c => c.category === activeTag);
@@ -31,11 +31,11 @@ export default function GalleryPage() {
          className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
          style={{ backgroundImage: "url('/assets/Hero.png')" }}
       >
-         {/* Overlay for better readability */}
+         
          <div className="min-h-screen bg-black/40 backdrop-blur-[2px]">
-            {/* Container */}
+            
             <div className="mx-auto max-w-[1400px] px-6 py-12 sm:px-12 sm:py-20">
-               {/* Navigation / Filter pills */}
+             
                <div className="flex items-center gap-3 overflow-x-auto pb-8 scrollbar-hide">
                   {TAGS.map((tag) => (
                      <button
@@ -51,7 +51,7 @@ export default function GalleryPage() {
                   ))}
                </div>
 
-               {/* Title */}
+              
                <div className="mb-12">
                   <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
                      All Tutorials
@@ -59,7 +59,7 @@ export default function GalleryPage() {
                   <div className="mt-4 h-1 w-20 bg-blue-500 rounded-full" />
                </div>
 
-               {/* Grid */}
+             
                <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                   {filteredComponents.length > 0 ? (
                      filteredComponents.map((component) => (
@@ -68,7 +68,7 @@ export default function GalleryPage() {
                            href={`/gallery/${component.id}`}
                            className="group flex flex-col"
                         >
-                           {/* Image Container */}
+                          
                            <div className="relative aspect-[1.3/1] overflow-hidden rounded-[24px] bg-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-blue-500/10 border border-white/10">
                               <Image
                                  src={component.image}
@@ -79,31 +79,31 @@ export default function GalleryPage() {
                               />
                            </div>
 
-                           {/* Text Content */}
+                          
                            <div className="mt-6 flex flex-col">
-                              {/* Date */}
+                            
                               <p className="text-[13px] font-medium text-white/40">
                                  {component.date}
                               </p>
 
-                              {/* Sub-tag */}
+                            
                               <div className="mt-3">
                                  <span className="rounded-lg bg-blue-500/20 border border-blue-500/30 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-blue-300 backdrop-blur-md">
                                     {component.category}
                                  </span>
                               </div>
 
-                              {/* Title */}
+                            
                               <h2 className="mt-4 text-2xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">
                                  {component.name}
                               </h2>
 
-                              {/* Description */}
+                             
                               <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/60">
                                  {component.shortDescription}
                               </p>
 
-                              {/* Bottom link indication */}
+                             
                               <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">
                                  Explore Project
                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

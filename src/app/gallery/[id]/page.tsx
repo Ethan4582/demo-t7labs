@@ -36,7 +36,7 @@ export default async function ComponentDemoPage({ params }: Props) {
 
    return (
       <div className="relative min-h-screen bg-black overflow-hidden">
-         {/* Navigation Overlay */}
+         
          <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 pointer-events-none">
             <Link
                href="/gallery"
@@ -53,12 +53,12 @@ export default async function ComponentDemoPage({ params }: Props) {
             </div>
          </nav>
 
-         {/* Demo Container */}
+     
          <div className="absolute inset-0">
             <DemoComponent />
          </div>
 
-         {/* Info Overlay (Optional, could be toggled) */}
+         
          <div className="fixed bottom-3 right-6 z-50 pointer-events-none max-w-xs transition-opacity duration-300">
             <div className="pointer-events-auto rounded-2xl bg-black/50 p-6 text-white backdrop-blur-xl border border-white/10 shadow-2xl">
                <p className="mt-2 text-sm font-medium text-blue-300">
