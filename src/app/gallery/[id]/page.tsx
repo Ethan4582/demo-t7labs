@@ -59,11 +59,10 @@ export default async function ComponentDemoPage({ params }: Props) {
          </div>
 
          {/* Info Overlay (Optional, could be toggled) */}
-         <div className="fixed bottom-6 right-6 z-50 pointer-events-none max-w-xs transition-opacity duration-300">
+         <div className="fixed bottom-3 right-6 z-50 pointer-events-none max-w-xs transition-opacity duration-300">
             <div className="pointer-events-auto rounded-2xl bg-black/50 p-6 text-white backdrop-blur-xl border border-white/10 shadow-2xl">
-               <h3 className="text-lg font-semibold">{componentData.name}</h3>
-               <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                  {componentData.description}
+               <p className="mt-2 text-sm font-medium text-blue-300">
+                  Instruction: {componentData.instruction}
                </p>
             </div>
          </div>
