@@ -1,0 +1,19 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000;
+  background-image: url('https://res.cloudinary.com/dbgee370f/image/upload/v1772522742/ChatGPT_Image_Mar_3_2026_12_49_05_PM_mx5kxt.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
