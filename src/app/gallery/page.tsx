@@ -7,14 +7,10 @@ import { components } from "@/src/data/components";
 
 const TAGS = [
    "RECENT",
-   "POPULAR",
    "SCROLL",
-   "Three.js",
-   "MISC",
-   "3D",
-   "MENU",
-   "TRANSITION",
-   "SVG",
+   "GSAP",
+   "SHADER",
+   "PAGE REVEAL",
    "LANDING PAGE",
 ];
 

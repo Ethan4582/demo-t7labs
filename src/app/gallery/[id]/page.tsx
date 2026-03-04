@@ -3,9 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 
-// Dynamic import registry
 const ComponentRegistry: Record<string, any> = {
    "water-ripple": dynamic(() => import("@/src/components/Water_Ripple")),
+   "loader-split-counter": dynamic(() => import("@/src/components/Loader_Split_Counter")),
 };
 
 interface Props {
@@ -36,7 +36,7 @@ export default async function ComponentDemoPage({ params }: Props) {
 
    return (
       <div className="relative min-h-screen bg-black overflow-hidden">
-         
+
          <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 pointer-events-none">
             <Link
                href="/gallery"
@@ -53,12 +53,12 @@ export default async function ComponentDemoPage({ params }: Props) {
             </div>
          </nav>
 
-     
+
          <div className="absolute inset-0">
             <DemoComponent />
          </div>
 
-         
+
          <div className="fixed bottom-3 right-6 z-50 pointer-events-none max-w-xs transition-opacity duration-300">
             <div className="pointer-events-auto rounded-2xl bg-black/50 p-6 text-white backdrop-blur-xl border border-white/10 shadow-2xl">
                <p className="mt-2 text-sm font-medium text-blue-300">
