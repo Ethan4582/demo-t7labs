@@ -40,7 +40,7 @@ export default function HomePage() {
             Explore Gallery
           </Link>
           <a
-            href="https://github.com/Ethan4582/demo-t7block/tree/master"
+            href="https://github.com/Ethan4582/demo-t7labs"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-white/30 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-105 active:scale-95"

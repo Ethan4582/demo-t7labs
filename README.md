@@ -8,7 +8,7 @@ This repository contains the Next.js implementation of the blog published at  [@
 
 The blog showcases new components, templates, and modern frontend techniques commonly seen on premium landing pages. This repo is the working project version of those published articles.
 
-> Important: The designs are not fully original concepts. They are inspired by various websites and YouTube tutorials. Proper credits have been acknowledged in the blog wherever applicable.
+> Important: This are not fully original concepts. They are inspired by various websites and YouTube tutorials. Proper credits have been acknowledged in the blog wherever applicable.
 
 ---
 
