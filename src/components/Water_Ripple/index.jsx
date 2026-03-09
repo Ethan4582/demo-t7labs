@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import {
   simulationVertexShader,
@@ -13,6 +13,7 @@ import styles from './style.module.scss';
 export default function RippleEffect() {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
+  const [hasError, setHasError] = useState(false);
   const mouseRef = useRef(new THREE.Vector2(0, 0));
 
   useEffect(() => {
@@ -22,14 +23,21 @@ export default function RippleEffect() {
     const simScene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
 
-    const renderer = new THREE.WebGLRenderer({
-      canvas,
-      antialias: true,
-      alpha: true,
-      preserveDrawingBuffer: true,
-    });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: true,
+        alpha: true,
+        preserveDrawingBuffer: true,
+      });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    } catch (e) {
+      console.error("WebGL initialization failed:", e);
+      setHasError(true);
+      return;
+    }
 
     const mouse = mouseRef.current;
 
@@ -47,7 +55,7 @@ export default function RippleEffect() {
     let rtA = new THREE.WebGLRenderTarget(width, height, options);
     let rtB = new THREE.WebGLRenderTarget(width, height, options);
 
-   
+
     const simMaterial = new THREE.ShaderMaterial({
       uniforms: {
         textureA: { value: null },
@@ -60,7 +68,7 @@ export default function RippleEffect() {
       fragmentShader: simulationFragmentShader,
     });
 
- 
+
     const renderMaterial = new THREE.ShaderMaterial({
       uniforms: {
         textureA: { value: null },
@@ -221,7 +229,7 @@ export default function RippleEffect() {
 
     animate();
 
-    
+
     return () => {
       renderer.domElement.removeEventListener('mousemove', onMouseMove);
       renderer.domElement.removeEventListener('mouseleave', onMouseLeave);
@@ -234,6 +242,25 @@ export default function RippleEffect() {
       textTexture.dispose();
     };
   }, []);
+
+  if (hasError) {
+    return (
+      <div className={styles.container} style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(45deg, #111, #222)',
+        color: '#fef4b8',
+        fontSize: 'clamp(2rem, 8vw, 6rem)',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        padding: '2rem',
+        fontFamily: 'system-ui, -apple-system, sans-serif'
+      }}>
+        Water Ripple Effect
+      </div>
+    );
+  }
 
   return (
     <div ref={containerRef} className={styles.container}>
