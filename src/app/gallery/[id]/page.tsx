@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 const ComponentRegistry: Record<string, any> = {
    "water-ripple": dynamic(() => import("@/src/components/Water_Ripple")),
    "loader-split-counter": dynamic(() => import("@/src/components/Loader_Split_Counter")),
+   "scroll-motion-gallery": dynamic(() => import("@/src/components/Scroll_Motion_Gallery")),
 };
 
 interface Props {
@@ -21,6 +22,7 @@ export default async function ComponentDemoPage({ params }: Props) {
    }
 
    const DemoComponent = ComponentRegistry[id];
+   const isScrollable = componentData.category === "SCROLL";
 
    if (!DemoComponent) {
       return (
@@ -35,9 +37,9 @@ export default async function ComponentDemoPage({ params }: Props) {
    }
 
    return (
-      <div className="relative min-h-screen bg-black overflow-hidden">
+      <div className={`relative min-h-screen bg-black ${isScrollable ? "" : "overflow-hidden"}`}>
 
-         <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 pointer-events-none">
+         <nav className="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between p-6 pointer-events-none">
             <Link
                href="/gallery"
                className="pointer-events-auto flex items-center gap-2 rounded-full bg-black/50 px-4 py-2 text-sm font-medium text-white backdrop-blur-md transition-all hover:bg-black/70 border border-white/10"
@@ -54,7 +56,7 @@ export default async function ComponentDemoPage({ params }: Props) {
          </nav>
 
 
-         <div className="absolute inset-0">
+         <div className={isScrollable ? "relative w-full" : "absolute inset-0"}>
             <DemoComponent />
          </div>
 

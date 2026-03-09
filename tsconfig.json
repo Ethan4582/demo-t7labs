@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/components/Scroll_Motion_Gallery/index.tsx"  ],
   "exclude": ["node_modules"]
 }

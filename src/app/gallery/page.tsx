@@ -9,7 +9,7 @@ const TAGS = [
    "RECENT",
    "SCROLL",
    "GSAP",
-   "SHADER",
+   "MISC",
    "PAGE REVEAL",
    "LANDING PAGE",
 ];

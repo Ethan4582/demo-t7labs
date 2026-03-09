@@ -10,7 +10,16 @@ export interface ComponentData {
 }
 
 export const components: ComponentData[] = [
-    {
+   {
+      id: "scroll-motion-gallery",
+      name: "Scroll Motion Gallery",
+      shortDescription: "A scroll-driven gallery where images rotate with depth and motion. Hover reveals video previews and metadata. ",
+      instruction: "Scroll to see the magic✨.",
+      image: "https://res.cloudinary.com/dbgee370f/image/upload/v1772525777/Screenshot_2026-03-03_124655_lgc6rs.png",
+      category: "SCROLL",
+      date: "March 10, 2026",
+   },
+   {
       id: "loader-split-counter",
       name: "Loader Split Counter",
       shortDescription: "A stylish animated loading screen with split counting numbers and progress bars.",
@@ -28,5 +37,4 @@ export const components: ComponentData[] = [
       category: "SHADER",
       date: "March 3, 2026",
    }
-  
 ];
