@@ -7,6 +7,7 @@ const ComponentRegistry: Record<string, any> = {
    "water-ripple": dynamic(() => import("@/src/components/Water_Ripple")),
    "loader-split-counter": dynamic(() => import("@/src/components/Loader_Split_Counter")),
    "scroll-motion-gallery": dynamic(() => import("@/src/components/Scroll_Motion_Gallery")),
+   "infinite-atlas-gallery": dynamic(() => import("@/src/components/Infinite_Atlas_Gallery")),
 };
 
 interface Props {

@@ -11,6 +11,18 @@ export interface ComponentData {
 
 export const components: ComponentData[] = [
    {
+  id: "infinite-atlas-gallery",
+  name: "Infinite Atlas Gallery",
+  shortDescription:
+    "An infinite WebGL gallery with cylindrical warp distortion, GPU-driven layout, and frosted glass hover effects.",
+  instruction:
+    "Scroll or drag to explore the infinite gallery. Hover over cards to reveal the frosted-glass interaction effects.",
+  image:
+    "https://res.cloudinary.com/dbgee370f/image/upload/v1772525777/Screenshot_2026-03-03_124655_lgc6rs.png",
+  category: "WEBGL",
+  date: "March 16, 2026",
+},
+   {
       id: "scroll-motion-gallery",
       name: "Scroll Motion Gallery",
       shortDescription: "A scroll-driven gallery where images rotate with depth and motion. Hover reveals video previews and metadata. ",
@@ -31,8 +43,8 @@ export const components: ComponentData[] = [
    {
       id: "water-ripple",
       name: "Water Ripple",
-      shortDescription: "Interactive WebGL water ripples with real-time physics and distortions. If see an error, it means your browser doesn't support WebGL.",
-      instruction: "Move your cursor to create ripples.",
+      shortDescription: "Interactive WebGL water ripples with real-time physics and distortions.",
+      instruction: "Move your cursor to create ripples. If see an error, it means your browser doesn't support WebGL 😅",
       image: "https://res.cloudinary.com/dbgee370f/image/upload/v1772525777/Screenshot_2026-03-03_124655_lgc6rs.png",
       category: "MISC",
       date: "March 3, 2026",

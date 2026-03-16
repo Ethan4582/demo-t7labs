@@ -15,6 +15,21 @@ const nextConfig: NextConfig = {
         hostname: 'images.unsplash.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.prod.website-files.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'framerusercontent.com',
+        pathname: '/**',
+      },
     ],
   },
 };
