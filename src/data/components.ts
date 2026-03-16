@@ -16,7 +16,7 @@ export const components: ComponentData[] = [
   shortDescription:
     "An infinite WebGL gallery with cylindrical warp distortion, GPU-driven layout, and frosted glass hover effects.",
   instruction:
-    "Scroll or drag to explore the infinite gallery. Hover over cards to reveal the frosted-glass interaction effects.",
+    "Scroll or drag to explore the infinite gallery.If you dont see any images you need to add projects in the asset_data.ts file.",
   image:
     "https://res.cloudinary.com/dbgee370f/image/upload/v1772525777/Screenshot_2026-03-03_124655_lgc6rs.png",
   category: "WEBGL",
