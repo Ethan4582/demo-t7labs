@@ -1,4 +1,4 @@
-import { setConfig } from "./script";
+
 
 export const Controls = ({
    curvature,

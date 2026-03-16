@@ -18,8 +18,8 @@ export const components: ComponentData[] = [
   instruction:
     "Scroll or drag to explore the infinite gallery.If you dont see any images you need to add projects in the asset_data.ts file.",
   image:
-    "https://res.cloudinary.com/dbgee370f/image/upload/v1772525777/Screenshot_2026-03-03_124655_lgc6rs.png",
-  category: "WEBGL",
+    "https://pub-4b0a8f18a97e4b44914872dd0d22870b.r2.dev/main_T7_labs_agency/demo.png",
+  category: "GSAP",
   date: "March 16, 2026",
 },
    {

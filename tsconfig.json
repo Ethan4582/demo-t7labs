@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/components/Scroll_Motion_Gallery/index.tsx"  ],
+, "src/components/Scroll_Motion_Gallery/index.tsx", ".agent/skills/add_new_component/script.ts", ".agent/skills/add_new_component/textures.ts"  ],
   "exclude": ["node_modules"]
 }

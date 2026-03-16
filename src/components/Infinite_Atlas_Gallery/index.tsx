@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { init, cleanup, setConfig } from "./script";
+import { init, cleanup, setConfig } from "./scripts/engine";
 import { Controls } from "./Controls";
 import styles from "./style.module.scss";
 
