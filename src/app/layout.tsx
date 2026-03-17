@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Demo-t7labs",
-  description: "It T7Block Blog Demo/Implementation",
+  title: "T7Labs Demo – UI Components & Blog Implementations",
+  description:
+    "Explore premium UI components and real-world blog implementations by T7Labs. Build modern web experiences with ready-to-use components.",
+    
+  icons: {
+    icon: "/assets/bluelogo.png",
+    shortcut: "/assets/bluelogo.png",
+    apple: "/assets/bluelogo.png",
+  },
 };
 
 
