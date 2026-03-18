@@ -19,8 +19,20 @@ export const components: ComponentData[] = [
     "Scroll or drag to explore the infinite gallery.If you dont see any images you need to add projects in the asset_data.ts file.",
   image:
     "https://pub-4b0a8f18a97e4b44914872dd0d22870b.r2.dev/main_T7_labs_agency/demo.png",
-  category: "GSAP",
+  category: "THREE.JS",
   date: "March 16, 2026",
+},
+{
+  id: "sticky-scroll-trigger",
+  name: "Sticky ScrollTrigger Cards",
+  shortDescription:
+    "A GSAP ScrollTrigger-based sticky card layout with dynamic image stacking and optional scale animation.",
+  instruction:
+    "Scroll to see stacked pinned sections. And use the button to enable or disable the scale animation.",
+  image:
+    "https://pub-4b0a8f18a97e4b44914872dd0d22870b.r2.dev/blog_demo/scroll_trigger.png",
+  category: "GSAP",
+  date: "March 19, 2026",
 },
    {
       id: "scroll-motion-gallery",

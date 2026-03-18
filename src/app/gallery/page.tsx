@@ -9,9 +9,10 @@ const TAGS = [
    "RECENT",
    "SCROLL",
    "GSAP",
+   "THREE.JS",
    "MISC",
    "PAGE REVEAL",
-   "LANDING PAGE",
+   
 ];
 
 export default function GalleryPage() {

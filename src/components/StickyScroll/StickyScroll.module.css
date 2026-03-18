@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+}
+
+/* ✅ FIXED: no global selector */
+.section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero h1 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 400;
+  font-size: 200px;
+  color: #fff;
+  letter-spacing: -8px;
+  line-height: 90%;
+  z-index: 2;
+}
+
+.card.scroll {
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1000px;
+  height: 700px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* GSAP hooks */
+.pinned {}
+.scroll {}
+.hero {}
+.card {}

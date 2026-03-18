@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 
 const ComponentRegistry: Record<string, any> = {
    "water-ripple": dynamic(() => import("@/src/components/Water_Ripple")),
+   "sticky-scroll-trigger": dynamic(() => import("@/src/components/StickyScroll/Controll_Srcoll")),
    "loader-split-counter": dynamic(() => import("@/src/components/Loader_Split_Counter")),
    "scroll-motion-gallery": dynamic(() => import("@/src/components/Scroll_Motion_Gallery")),
    "infinite-atlas-gallery": dynamic(() => import("@/src/components/Infinite_Atlas_Gallery")),
@@ -23,7 +24,7 @@ export default async function ComponentDemoPage({ params }: Props) {
    }
 
    const DemoComponent = ComponentRegistry[id];
-   const isScrollable = componentData.category === "SCROLL";
+   const isScrollable = componentData.category === "SCROLL" || componentData.category === "GSAP";
 
    if (!DemoComponent) {
       return (
